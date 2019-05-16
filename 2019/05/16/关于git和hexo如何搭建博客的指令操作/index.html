@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>假前端</title>
+    <title>name - 假前端</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="前端博客,"> 
-    
+    <meta name="description" content="结合github与hexo搭建个人博客本地配置
+在github创建仓库 名称为 username.github.io
+在本地安装hexo-cli
+npm install hexo-cli -g  
+,"> 
     <meta name="author" content="假前端"> 
     <link rel="alternative" href="atom.xml" title="假前端" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.jpg"> 
@@ -30,89 +34,86 @@
 <body class="loading">
     <span id="config-title" style="display:none">假前端</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://www.baidu.com/" title="百度" target="_blank" rel="noopener">百度</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/whoami/" title="Whoami" target="_blank" rel="noopener">Whoami</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/Fechin" title="Github" target="_blank" rel="noopener">Github</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://twitter.com/FechinLi" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-        </li>
-        
-    </ul>
-    <p id="copyright">
-        &copy; 2019 假前端.
-        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a>
-        by Fechin
-    </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
-    </div>
-    <div id="vibrant">
-        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://dog12306.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">name</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
         <div>
-            <a class="image-logo" href="/"></a>
-            <div class="icon-menu switchmenu"></div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
-    
-    <div id="post0">
-        <p>五月 16, 2019</p>
-        <h2><a href="/2019/05/16/关于git和hexo如何搭建博客的指令操作/" title="name" class="posttitle">name</a></h2>
-        <p class="summary">结合github与hexo搭建个人博客本地配置
-在github创建仓库 名称为 username.github.i...</p>
-    </div>
-    
+    <div class="scrollbar"></div>
 </div>
 
-    <div id="primary">
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">name</h1>
+        <div class="stuff">
+            <span>五月 16, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="结合github与hexo搭建个人博客"><a href="#结合github与hexo搭建个人博客" class="headerlink" title="结合github与hexo搭建个人博客"></a>结合github与hexo搭建个人博客</h2><h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><ul>
+<li>在github创建仓库 名称为 username.github.io</li>
+<li>在本地安装hexo-cli<ul>
+<li>npm install hexo-cli -g  </li>
+<li>在文件夹 hexo init blog(文件夹名称自己写,不能用中文)</li>
+<li>进入blog文件 hexo server (在本地发布预览)</li>
+<li>访问 localhost:4000 即可预览</li>
+</ul>
+</li>
+<li>在blog文件cmd 输入 hexo new xxxx<ul>
+<li>在项目的source&gt;_posts目录 会创建xxxx.md文件</li>
+<li>在这个md文件写markdown笔记即可</li>
+</ul>
+</li>
+</ul>
+<h3 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h3><ul>
+<li>添加插件 在文件夹 npm install hexo-deployer-git –save</li>
+<li>修改_config.yml配置文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: &lt;repository url&gt; #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span><br></pre></td></tr></table></figure>
+<ul>
+<li>把xxx.md文件转换为html  hexo g </li>
+<li>把本地的静态文件发布到 github   deploy</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src>
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
         
-<div class="post">
-    <a href="/2019/05/16/关于git工具的一些常用指令/" title="关于git工具的一些常用指令">
-        <img src="/img/DLAM.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>五月 16, 2019</p>
-        <h3><a href="/2019/05/16/关于git工具的一些常用指令/" title="关于git工具的一些常用指令" class="posttitle">关于git工具的一些常用指令</a></h3>
-        <p>.gitignore
-配置忽略文件,可用配置哪些文件不需要git托管.
-
-初始化一个git仓库
-git init
-git status 查看状态
-红色的为...</p>
-    </div>
-</div>
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="c6877e0ee3c8ce05566d" data-cs="04761fafcf7a76066f9f86eb6c2ef17a96cc307b" data-r="Dog12306.github.io" data-o="Dog12306" data-a="Dog12306" data-d="true">查看评论</div>
 
 
     </div>
     
 </div>
-<div id="preview"></div>
 
+
+    </div>
+</div>
 </body>
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
