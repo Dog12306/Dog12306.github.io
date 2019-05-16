@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>论最好的你 - 假前端</title>
+    <title>关于git工具的一些常用指令 - 假前端</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="前端博客,"> 
-    <meta name="description" content="这是测试markDownhellow world
-"> 
+    <meta name="description" content=".gitignore
+配置忽略文件,可用配置哪些文件不需要git托管.
+
+初始化一个git仓库
+git init
+git status 查看状态
+红色的为工作区 未暂存状态
+
+
+git add . ,"> 
     <meta name="author" content="假前端"> 
     <link rel="alternative" href="atom.xml" title="假前端" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.jpg"> 
@@ -36,7 +44,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="https://dog12306.github.io"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">论最好的你</h3>
+    <h3 class="subtitle">关于git工具的一些常用指令</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -54,14 +62,54 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">论最好的你</h1>
+        <h1 class="title">关于git工具的一些常用指令</h1>
         <div class="stuff">
-            <span>五月 15, 2019</span>
+            <span>五月 16, 2019</span>
             
 
         </div>
         <div class="content markdown">
-            <h2 id="这是测试markDown"><a href="#这是测试markDown" class="headerlink" title="这是测试markDown"></a>这是测试markDown</h2><p><a href="../hello-world/">hellow world</a></p>
+            <h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><blockquote>
+<p>配置忽略文件,可用配置哪些文件不需要git托管.</p>
+</blockquote>
+<h2 id="初始化一个git仓库"><a href="#初始化一个git仓库" class="headerlink" title="初始化一个git仓库"></a>初始化一个git仓库</h2><ul>
+<li>git init</li>
+<li>git status 查看状态<ul>
+<li>红色的为工作区 未暂存状态</li>
+</ul>
+</li>
+<li>git add .  添加到暂存区</li>
+<li>git checkout a.html  把文件从暂存区还原到工作区</li>
+<li>git commit -m’xxx’ 提交到存储区 (就不怕代码覆盖,每一次提交都会有hash记录)<ul>
+<li>如果没有写 -m 会进入vim编辑器,输入esc   :q 退出</li>
+</ul>
+</li>
+<li>git log 查看提交到存储区的日志<ul>
+<li>hash值 每次都不同</li>
+<li>HEAD 指向当前的提交记录</li>
+</ul>
+</li>
+</ul>
+<h2 id="分支功能"><a href="#分支功能" class="headerlink" title="分支功能"></a>分支功能</h2><blockquote>
+<p>git 提交默认是主分支 master</p>
+</blockquote>
+<ul>
+<li>git branch xx 创建xx分支</li>
+<li>git branch   查看分支状态 (带*的为当前所在分支)</li>
+<li>git checkout xx 切换到xx分支</li>
+<li>git merge xx 合并xx分支到当前主分支(合并之前必须先commit)</li>
+<li>git branch -d xx 删除xx分支 </li>
+</ul>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><ul>
+<li>git remote add origin xxxx  (远程创建仓库不选择readme.md会出现提示,只需要创建一次,建立本地和github远程仓库的连接)</li>
+<li>git push -u master (只需要第一次 -u master)</li>
+<li>git  add  .   git commit -m’xxx’  git push  (push之前 必须先commit)<ul>
+<li>git push 被拒绝,一般是由于多人修改了同一个仓库同文件代码所致,通过pull 拉取最新代码手动合并后提交即可.</li>
+</ul>
+</li>
+<li>git clone xxx  在新本地clone远程仓库 </li>
+<li>git pull 可用获取远程仓库最新代码 并合并到本地(如果出现冲突, 需要手动合并)</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
